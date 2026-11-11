@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Salon Professional Academy | Altoona, PA | Cosmetology, Esthetics &amp; Nail Tech School</title>
+<meta name="description" content="Beauty school in Altoona, PA. Cosmetology, esthetics, manicuring and teacher programs. Book a tour or request info.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#26102f; --plum2:#3a1a47; --orchid:#e5399b; --lilac:#d8c6f7; --blush:#fff0f6; --paper:#fffafc; --ink:#1d1022; --muted:#6c5a74;
+  --r:22px;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Figtree","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orchid);outline-offset:3px}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-.02em}
+
+/* header */
+.top{background:var(--plum);color:#fff;font-size:14px}
+.top .wrap{display:flex;justify-content:space-between;gap:12px;padding:8px 0;flex-wrap:wrap}
+.top a{text-decoration:none;font-weight:600}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(255,250,252,.9);backdrop-filter:blur(12px);border-bottom:1px solid #f0dfe8}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
+.logo{font-family:var(--display);font-weight:800;font-size:22px;text-decoration:none;letter-spacing:-.02em}
+.logo small{display:block;font-family:var(--body);font-weight:500;font-size:12px;color:var(--muted);letter-spacing:0}
+nav ul{list-style:none;display:flex;gap:26px;padding:0}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{color:var(--orchid)}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:600;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.pri{background:var(--orchid);color:#fff}
+.btn.pri:hover{background:#c92a86}
+.btn.ghost{border-color:currentColor}
+.btn.sm{padding:10px 20px;font-size:15px}
+@media(max-width:820px){nav ul{display:none}}
+
+/* hero */
+.hero{background:var(--plum);color:#fff;position:relative;overflow:hidden;padding:84px 0 110px}
+.hero::after{content:"";position:absolute;right:-140px;top:-120px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--orchid),transparent 65%);opacity:.55}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end}
+.hero h1{font-size:clamp(46px,8vw,104px);font-weight:800}
+.hero h1 span{display:block;color:var(--lilac)}
+.hero p{max-width:46ch;margin:26px 0 34px;font-size:19px;color:#ecdff3}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .photo{aspect-ratio:4/5;border-radius:var(--r) var(--r) 240px var(--r);overflow:hidden;background:var(--plum2)}
+.hero .photo img{width:100%;height:100%;object-fit:cover}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.chips li{list-style:none;padding:8px 16px;border:1px solid #ffffff44;border-radius:999px;font-size:14px}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero .photo{aspect-ratio:16/10;border-radius:var(--r)}.hero{padding:56px 0 70px}}
+
+/* programs */
+section{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(36px,5vw,64px);max-width:14ch}
+.head p{max-width:42ch;color:var(--muted)}
+.prog{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.rows{border-top:1px solid #e6d3de}
+.row{border-bottom:1px solid #e6d3de}
+.row button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:26px 4px;font-family:var(--display);font-weight:800;font-size:clamp(32px,4.6vw,58px);letter-spacing:-.025em;line-height:1;color:#b9a3c2;transition:color .2s}
+.row button:hover,.row.open button{color:var(--ink)}
+.row button:focus-visible{outline:3px solid var(--orchid);outline-offset:2px}
+.plus{width:38px;height:38px;border-radius:50%;border:2px solid currentColor;position:relative;flex:none;transition:transform .25s}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;background:currentColor;transform:translate(-50%,-50%)}
+.plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.row.open .plus{transform:rotate(45deg);color:var(--orchid)}
+.panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.row.open .panel{grid-template-rows:1fr}
+.panel>div{overflow:hidden}
+.panel p{padding:0 4px 8px;max-width:48ch;color:var(--muted)}
+.panel a{display:inline-block;margin:6px 4px 28px;font-weight:600;color:var(--orchid)}
+.stage{position:sticky;top:100px;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:var(--blush)}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}
+.stage img.on{opacity:1}
+.stage .tag{position:absolute;left:16px;bottom:16px;background:var(--paper);padding:8px 16px;border-radius:999px;font-weight:600;font-size:15px}
+@media(max-width:820px){.prog{grid-template-columns:1fr}.stage{display:none}}
+
+/* why */
+.why{background:var(--blush)}
+.why .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why article{background:#fff;padding:28px;border-radius:var(--r)}
+.why article:nth-child(2){background:var(--lilac)}
+.why article:nth-child(3){background:var(--plum);color:#fff}
+.why h3{font-size:26px;margin-bottom:10px}
+.why p{font-size:15.5px;opacity:.85}
+@media(max-width:900px){.why .grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.why .grid{grid-template-columns:1fr}}
+
+/* voices */
+.voices .list{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.voices figure{display:flex;flex-direction:column;gap:18px}
+.voices blockquote{font-family:var(--display);font-size:28px;line-height:1.15;letter-spacing:-.015em;font-weight:600}
+.voices figcaption{display:flex;align-items:center;gap:12px;font-weight:600}
+.voices img{width:48px;height:48px;border-radius:50%;object-fit:cover;background:var(--lilac)}
+@media(max-width:900px){.voices .list{grid-template-columns:1fr}}
+
+/* guest services */
+.guest{background:var(--plum);color:#fff}
+.guest .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.guest h2{font-size:clamp(36px,5vw,60px);margin-bottom:18px}
+.guest p{color:#e5d6ec;max-width:44ch;margin-bottom:28px}
+.hours{background:var(--plum2);border-radius:var(--r);padding:32px}
+.hours dl{display:grid;grid-template-columns:auto 1fr;gap:12px 28px}
+.hours dt{color:var(--lilac)}
+.hours dd{font-weight:600;margin:0}
+.hours h3{font-size:24px;margin-bottom:20px}
+@media(max-width:820px){.guest .wrap{grid-template-columns:1fr}}
+
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.faq h2{font-size:clamp(36px,5vw,60px)}
+details{border-bottom:1px solid #e6d3de;padding:22px 0}
+details:first-of-type{border-top:1px solid #e6d3de}
+summary{cursor:pointer;font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;line-height:1;color:var(--orchid);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:12px;color:var(--muted);max-width:56ch}
+@media(max-width:820px){.faq .wrap{grid-template-columns:1fr;gap:28px}}
+
+/* form */
+.contact{background:var(--lilac)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact h2{font-size:clamp(36px,5vw,64px);margin-bottom:16px}
+form{background:#fff;padding:32px;border-radius:var(--r);display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:15px}
+input,select{font:inherit;padding:13px 14px;border:1.5px solid #d9c6e0;border-radius:12px;background:var(--paper)}
+input:focus,select:focus{outline:3px solid var(--orchid);outline-offset:1px;border-color:var(--orchid)}
+.ok{display:none;font-weight:600;color:#1c7a45}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#d7c9de;padding:60px 0 30px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+footer h3{font-size:17px;color:#fff;margin-bottom:12px;font-family:var(--body);font-weight:600;letter-spacing:0}
+footer ul{list-style:none;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .fine{margin-top:40px;padding-top:22px;border-top:1px solid #ffffff22;font-size:13px;color:#a998b2}
+@media(max-width:820px){footer .cols{grid-template-columns:1fr 1fr}}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>415 D Orchard Ave., Altoona, PA 16601</span>
+  <a href="tel:814-944-4494">Call 814-944-4494</a>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#top">TSPA<small>The Salon Professional Academy, Altoona</small></a>
+  <nav aria-label="Main"><ul>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#why">Why TSPA</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#guest">Guest services</a></li>
+  </ul></nav>
+  <a class="btn pri sm" href="#info">Request info</a>
+</div></header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:110px">
+  <div class="wrap">
+    <div>
+      <h1>Your beauty career starts here.<span>Learn it hands-on.</span></h1>
+      <p>Train in cosmetology, esthetics, manicuring or teaching at Altoona's Salon Professional Academy, with small classes and real guests from day one.</p>
+      <div class="cta">
+        <a class="btn pri" href="#info">Book a tour</a>
+        <a class="btn ghost" href="#programs">See programs</a>
+      </div>
+      <ul class="chips">
+        <li>State approved</li><li>Financial aid available</li><li>Scholarships</li>
+      </ul>
+    </div>
+    <div class="photo"><img src="https://www.tspaaltoona.com/wp-content/uploads/sites/10/2025/11/Cosmo-Desktop.webp" alt="TSPA student styling hair" onerror="this.remove()"></div>
+  </div>
+</section>
+
+<section id="programs">
+  <div class="wrap">
+    <div class="head">
+      <h2>Pick your program</h2>
+      <p>Four paths into the industry. Open one to see what it covers.</p>
+    </div>
+    <div class="prog">
+      <div class="rows" id="rows">
+        <div class="row open">
+          <button aria-expanded="true" data-img="0">Cosmetology<span class="plus"></span></button>
+          <div class="panel"><div><p>Hair, skin and nails in one state-approved program, with the training salons look for.</p><a href="https://www.tspaaltoona.com/program/cosmetology/">Cosmetology details</a></div></div>
+        </div>
+        <div class="row">
+          <button aria-expanded="false" data-img="1">Esthetics<span class="plus"></span></button>
+          <div class="panel"><div><p>Skin care, treatments and spa skills. Graduate in less than a year.</p><a href="https://www.tspaaltoona.com/program/esthetics/">Esthetics details</a></div></div>
+        </div>
+        <div class="row">
+          <button aria-expanded="false" data-img="2">Manicuring<span class="plus"></span></button>
+          <div class="panel"><div><p>Nail technology in a supportive, inclusive classroom.</p><a href="https://www.tspaaltoona.com/program/manicuring/">Manicuring details</a></div></div>
+        </div>
+        <div class="row">
+          <button aria-expanded="false" data-img="3">Teacher<span class="plus"></span></button>
+          <div class="panel"><div><p>Learn to teach the next class of beauty professionals, in a hands-on setting with small class sizes.</p><a href="https://www.tspaaltoona.com/program/teacher/">Teacher details</a></div></div>
+        </div>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <img class="on" src="https://www.tspaaltoona.com/wp-content/uploads/sites/10/2025/11/Cosmo-Tile-1.webp" alt="" onerror="this.remove()">
+        <img src="https://www.tspaaltoona.com/wp-content/uploads/sites/10/2025/11/Esthetics-Tile-1-1.webp" alt="" onerror="this.remove()">
+        <img src="https://www.tspaaltoona.com/wp-content/uploads/sites/10/2025/11/Nail-Tech-Tile-1.webp" alt="" onerror="this.remove()">
+        <img src="https://www.tspaaltoona.com/wp-content/uploads/sites/10/2025/11/Image-3.png" alt="" onerror="this.remove()">
+        <span class="tag" id="tag">Cosmetology</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="head">
+      <h2>Why students choose TSPA</h2>
+      <p>We're part of a nationwide community of 30+ academies, right here in Altoona.</p>
+    </div>
+    <div class="grid">
+      <article><h3>State approved</h3><p>Programs built to meet licensing requirements.</p></article>
+      <article><h3>Under a year</h3><p>Graduate from esthetics in less than a year.</p></article>
+      <article><h3>Small classes</h3><p>More time with instructors, more hands-on practice.</p></article>
+      <article><h3>Everyone belongs</h3><p>An inclusive, supportive place to learn.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="voices">
+  <div class="wrap">
+    <div class="head"><h2>Hear from students</h2></div>
+    <div class="list">
+      <figure><blockquote>I love the people and I feel so comfortable here.</blockquote><figcaption><img src="https://www.tspaaltoona.com/wp-content/uploads/sites/10/2020/04/kenna.jpg" alt="" onerror="this.remove()">Kenna</figcaption></figure>
+      <figure><blockquote>After a big career change, I'm really excited to see what the future holds.</blockquote><figcaption><img src="https://www.tspaaltoona.com/wp-content/uploads/sites/10/2020/04/brittany.jpg" alt="" onerror="this.remove()">Brittany</figcaption></figure>
+      <figure><blockquote>School is very up-to-date!</blockquote><figcaption><img src="https://www.tspaaltoona.com/wp-content/uploads/sites/10/2020/04/Untitled-5.jpg" alt="" onerror="this.remove()">Brooke</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="guest" id="guest">
+  <div class="wrap">
+    <div>
+      <h2>Book a salon or spa visit</h2>
+      <p>Our students work on real guests under instructor supervision. See the price list or book your appointment online.</p>
+      <div class="cta">
+        <a class="btn pri" href="https://login.meevo.com/TSPAAltoona/ob?locationId=106150">Book appointment</a>
+        <a class="btn ghost" href="https://www.tspaaltoona.com/salon-services/#service-menu">Price list</a>
+      </div>
+    </div>
+    <div class="hours">
+      <h3>Student guest services hours</h3>
+      <dl>
+        <dt>Mon, Tue, Thu</dt><dd>9:00 am – 8:30 pm</dd>
+        <dt>Wed, Fri, Sat</dt><dd>9:00 am – 4:00 pm</dd>
+        <dt>Sunday</dt><dd>Closed</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Questions, answered</h2>
+    <div>
+      <details><summary>How can I pay for school?</summary><p>Financial aid and scholarships are available. Ask our admissions team what you may qualify for.</p></details>
+      <details><summary>Are you licensed?</summary><p>Our programs are state approved. Call admissions for licensing details.</p></details>
+      <details><summary>Do you help with job placement?</summary><p>Ask admissions how we support graduates as they enter the industry.</p></details>
+      <details><summary>How do I get started?</summary><p>Request program info or book a tour. You can also apply online at any time.</p></details>
+      <details><summary>How long do programs take?</summary><p>It depends on the program. Esthetics can be completed in less than a year.</p></details>
+      <details><summary>What is the culture like?</summary><p>Students describe a comfortable, supportive community. Book a tour to see for yourself.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="info">
+  <div class="wrap">
+    <div>
+      <h2>See your future in action</h2>
+      <p>Request program info or book a tour of the campus. Prefer to talk? Call 814-944-4494.</p>
+      <div class="cta" style="margin-top:22px"><a class="btn pri" href="https://admissions-tspa.edular.com/sign-in">Apply now</a></div>
+    </div>
+    <form id="f" novalidate>
+      <label>Full name<input name="n" required autocomplete="name"></label>
+      <label>Email<input type="email" name="e" required autocomplete="email"></label>
+      <label>Phone<input type="tel" name="p" autocomplete="tel"></label>
+      <label>Program<select name="g"><option>Cosmetology</option><option>Esthetics</option><option>Manicuring</option><option>Teacher</option></select></label>
+      <button class="btn pri" type="submit">Request info</button>
+      <p class="ok" id="ok" role="status">Thanks! This is a demo form, so nothing was sent.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h3>TSPA Altoona</h3><p>415 D Orchard Ave.<br>Altoona, PA 16601<br><a href="tel:814-944-4494">814-944-4494</a></p></div>
+      <div><h3>Programs</h3><ul><li><a href="#programs">Cosmetology</a></li><li><a href="#programs">Esthetics</a></li><li><a href="#programs">Manicuring</a></li><li><a href="#programs">Teacher</a></li></ul></div>
+      <div><h3>About</h3><ul><li><a href="https://www.tspaaltoona.com/scholarships/">Scholarships</a></li><li><a href="https://www.tspaaltoona.com/financial-aid/">Financial aid</a></li><li><a href="https://www.tspaaltoona.com/about-us/">Why us</a></li><li><a href="https://www.tspaaltoona.com/contact-us/">Contact</a></li></ul></div>
+      <div><h3>Follow</h3><ul><li><a href="https://www.instagram.com/tspaaltoona/">Instagram</a></li><li><a href="https://www.facebook.com/TSPAAltoona/">Facebook</a></li></ul></div>
+    </div>
+    <p class="fine">Design concept for pitch purposes only. All franchise locations of The Salon Professional Academy are independently owned and operated. © 2026 The Salon Professional Academy, a Redken Business Resource.</p>
+  </div>
+</footer>
+
+<script>
+const rows=[...document.querySelectorAll('.row')],imgs=document.querySelectorAll('.stage img'),tag=document.getElementById('tag');
+rows.forEach((r,i)=>r.querySelector('button').addEventListener('click',()=>{
+  rows.forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});
+  r.classList.add('open');r.querySelector('button').setAttribute('aria-expanded','true');
+  imgs.forEach((m,j)=>m.classList.toggle('on',j===i));
+  tag.textContent=r.querySelector('button').firstChild.textContent;
+}));
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').style.display='block';e.target.reset()});
+</script>
+</body>
+</html>
